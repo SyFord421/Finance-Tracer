@@ -176,12 +176,12 @@ if __name__ == "__main__":
         print(" 1. Tambah\n", "2. Edit\n","3. Hapus\n", "4. Hitung\n","5. Cari\n", "6. Lihat Semua\n", "7. Rangkum semua\n", "8. Hapus semua\n", "9. Keluar\n")
         pilih = input("[⚙]: [Masukan Pilihan]: ").strip()
         if pilih == '1':
-            name = input("Masukan Nama Barang: ")
+            name = input("Masukan Nama Barang: ").lower().strip()
             price = input("Masukan Harga Barang: ")
             while not price.isdigit():
                 print("[🗳]: Masukan hanya angka")
                 price = input("Masukan Harga Barang: ")
-            category = input("Masukan Category: ")
+            category = input("Masukan Category: ").lower
             DT.add_to_list(name, price, category)
         elif pilih == '2':
             DT.edit_db()
